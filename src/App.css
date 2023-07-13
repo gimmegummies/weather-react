@@ -1,20 +1,32 @@
+/* @font-face {
+  font-family: "Kurka";
+  src: local("KurkaLapoyu-Regular"),
+    url("./fonts/KurkaLapoyu-Regular.otf") format("otf");
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .App {
+  font-family: "Ysabeau Office", sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background: #00467f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a5cc82,
+    #00467f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a5cc82,
+    #00467f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +36,29 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button,
+input {
+  font-family: inherit;
 }
 
-@keyframes App-logo-spin {
+.App footer {
+  margin-top: 1em;
+}
+
+footer a {
+  transition: all 0.25s ease-in-out;
+}
+
+footer a:hover {
+  cursor: pointer;
+  color: #00467f;
+}
+
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

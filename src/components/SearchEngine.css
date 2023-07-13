@@ -1,0 +1,60 @@
+.WeatherApp {
+  padding: 2em 4em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(87, 87, 87, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.WeatherApp form {
+  display: flex;
+  align-items: center;
+}
+
+.puff-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-block: 2rem;
+}
+
+input[type="search"] {
+  background: transparent;
+  margin-inline: 10px;
+  border: solid 1px white;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  transition: all 0.25s ease-in-out;
+}
+
+input[type="search"]:focus {
+  outline: none;
+  box-shadow: 5px 5px 15px 1px #ffffff;
+}
+
+.WeatherApp button[type="submit"] {
+  margin-right: 15px;
+  margin-left: 5px;
+  padding: 0.3em 0.6em;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to right, #a5cc82, #00467f);
+  transition: all 0.25s ease-in-out;
+}
+
+.WeatherApp button[type="submit"]:hover,
+.WeatherApp button[type="submit"]:focus {
+  box-shadow: 5px 5px 15px 1px #ffffff;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.WeatherApp a {
+  display: inline-block;
+  height: fit-content;
+}

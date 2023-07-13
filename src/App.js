@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import SearchEngine from "./components/SearchEngine";
+import "./App.css";
+import "./fonts/KurkaLapoyu-Regular.otf";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchEngine />
+      <footer>
+        coded by <a href="https://github.com/gimmegummies/weather-react">Ksu</a>
+      </footer>
     </div>
   );
 }
 
 export default App;
+
+// todo: make lo responsive, add 6-days forecast, style components, pay attention to font sizes (!), ::selection, hover on link in the footer
