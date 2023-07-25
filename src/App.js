@@ -15,4 +15,4 @@ function App() {
 
 export default App;
 
-// todo: make lo responsive, add 6-days forecast, style components, pay attention to font sizes (!), ::selection, hover on link in the footer
+// todo: add 6-days forecast

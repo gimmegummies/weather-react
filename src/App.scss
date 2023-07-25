@@ -3,6 +3,7 @@
   src: local("KurkaLapoyu-Regular"),
     url("./fonts/KurkaLapoyu-Regular.otf") format("otf");
 } */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-::-moz-selection {
-  background-color: #00467f;
-}
-
 ::selection {
   background-color: #00467f;
 }
@@ -23,8 +20,17 @@ html {
 .App {
   font-family: "Ysabeau Office", sans-serif;
   text-align: center;
-  background: #00467f; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #a5cc82, #00467f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #00467f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #a5cc82,
+    #00467f
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a5cc82,
+    #00467f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -62,4 +68,4 @@ footer a:hover {
   to {
     transform: rotate(360deg);
   }
-} *//*# sourceMappingURL=App.css.map */
+} */

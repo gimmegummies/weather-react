@@ -92,7 +92,7 @@ export default function SearchEngine() {
             icon={faLocationDot}
             style={{
               color: "#a5cc82",
-              height: "30px",
+              height: "clamp(30px, 8vh, 45px);",
             }}
             onMouseEnter={(e) => {
               e.target.style.filter = "drop-shadow(5px 5px 10px #FFFFFF)";

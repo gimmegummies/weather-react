@@ -12,10 +12,11 @@
 .WeatherApp form {
   display: flex;
   align-items: center;
-}
-.WeatherApp form input,
-.WeatherApp form button {
-  font-size: clamp(12px, 3vw, 26px);
+
+  input,
+  button {
+    font-size: clamp(12px, 3vw, 26px);
+  }
 }
 
 .puff-wrapper {
@@ -24,7 +25,7 @@
   padding-block: 2rem;
 }
 
-input[type=search] {
+input[type="search"] {
   background: transparent;
   margin-inline: 10px;
   border: solid 1px white;
@@ -34,12 +35,12 @@ input[type=search] {
   transition: all 0.25s ease-in-out;
 }
 
-input[type=search]:focus {
+input[type="search"]:focus {
   outline: none;
   box-shadow: 5px 5px 15px 1px #ffffff;
 }
 
-.WeatherApp button[type=submit] {
+.WeatherApp button[type="submit"] {
   margin-right: 25px;
   margin-left: 15px;
   padding: 0.3em 0.6em;
@@ -50,8 +51,8 @@ input[type=search]:focus {
   transition: all 0.25s ease-in-out;
 }
 
-.WeatherApp button[type=submit]:hover,
-.WeatherApp button[type=submit]:focus {
+.WeatherApp button[type="submit"]:hover,
+.WeatherApp button[type="submit"]:focus {
   box-shadow: 5px 5px 15px 1px #ffffff;
 }
 
@@ -61,6 +62,5 @@ button:hover {
 
 .WeatherApp a {
   display: inline-block;
-  height: -moz-fit-content;
   height: fit-content;
-}/*# sourceMappingURL=SearchEngine.css.map */
+}

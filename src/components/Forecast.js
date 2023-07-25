@@ -1,4 +1,5 @@
 import ReactAnimatedWeather from "react-animated-weather";
+import "./Forecast.css";
 
 export default function Forecast({ forecast }) {
   const { cityName, temp, descr, humid, wind, icon } = forecast;
@@ -21,7 +22,7 @@ export default function Forecast({ forecast }) {
         <div>
           <ReactAnimatedWeather icon={icons[icon]} color="white" />
           <p>
-            <span className="temperature">{temp}</span>°C
+            <span className="temperature">{temp}</span> °C
           </p>
         </div>
         <div>

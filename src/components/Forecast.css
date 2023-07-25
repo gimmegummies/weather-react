@@ -1,0 +1,26 @@
+.main_weather_info {
+  text-align: left;
+  margin-block: 1em;
+}
+.main_weather_info h2 {
+  font-size: clamp(24px, 4.8vw, 58px);
+}
+.main_weather_info h3 {
+  font-size: clamp(20px, 4vw, 48px);
+}
+
+.additional_weather_info {
+  margin-block: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1.5em;
+  place-items: center;
+}
+.additional_weather_info div:first-child p {
+  font-size: clamp(18px, 7vh, 46px);
+}
+
+.additional_weather_info div:nth-child(2) {
+  color: rgba(243, 234, 234, 0.8);
+  font-size: clamp(18px, 4vw, 36px);
+}/*# sourceMappingURL=Forecast.css.map */
