@@ -18,11 +18,13 @@ export default function SearchEngine() {
     icon: null,
   });
 
+  const weatherAPIUrl = "https://api.shecodes.io/weather/";
+
   useEffect(() => {
     const city = "Kharkiv";
-    const apiKey = "99b8f9330a1bfba3a85e523fd3c2e528";
+    const apiKey = "785e4002t4o34d2ed60bb3aec801e9af";
     const units = "metric";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    const url = `${weatherAPIUrl}v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
     async function getInitialData() {
       try {
@@ -43,12 +45,12 @@ export default function SearchEngine() {
 
   function displayForecast(resp) {
     // console.log(resp);
-    const cityName = resp.data.name;
-    const temp = Math.floor(resp.data.main.temp);
-    const descr = resp.data.weather[0].description;
-    const humid = resp.data.main.humidity;
+    const cityName = resp.data.city;
+    const temp = Math.floor(resp.data.temperature.current);
+    const descr = resp.data.condition.description;
+    const humid = resp.data.temperature.humidity;
     const wind = resp.data.wind.speed;
-    const icon = resp.data.weather[0].main;
+    const icon = descr.split(" ").join("_");
     setForecast({
       cityName,
       temp,
@@ -62,11 +64,12 @@ export default function SearchEngine() {
   async function getForecast(e) {
     e.preventDefault();
 
-    const apiKey = "99b8f9330a1bfba3a85e523fd3c2e528";
+    const apiKey = "785e4002t4o34d2ed60bb3aec801e9af";
     const units = "metric";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    const url = `${weatherAPIUrl}v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
     try {
+      console.log(url);
       const response = await axios.get(url);
       displayForecast(response);
     } catch (error) {
@@ -92,7 +95,7 @@ export default function SearchEngine() {
             icon={faLocationDot}
             style={{
               color: "#a5cc82",
-              height: "clamp(30px, 8vh, 45px);",
+              height: "clamp(30px, 8vh, 45px)",
             }}
             onMouseEnter={(e) => {
               e.target.style.filter = "drop-shadow(5px 5px 10px #FFFFFF)";

@@ -4,11 +4,16 @@ import "./Forecast.css";
 export default function Forecast({ forecast }) {
   const { cityName, temp, descr, humid, wind, icon } = forecast;
   const icons = {
-    Clear: "CLEAR_DAY",
-    Clouds: "CLOUDY",
-    Rain: "RAIN",
-    Mist: "FOG",
-    Snow: "SNOW",
+    clear_sky: "CLEAR_DAY",
+    overcast_clouds: "CLOUDY",
+    few_clouds: "CLOUDY",
+    broken_clouds: "CLOUDY",
+    shower_rain: "RAIN",
+    light_rain: "RAIN",
+    rain: "RAIN",
+    thunderstorm: "RAIN",
+    mist: "FOG",
+    snow: "SNOW",
   };
 
   return (
