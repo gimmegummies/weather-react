@@ -8,6 +8,7 @@ export default function Forecast({ forecast }) {
     overcast_clouds: "CLOUDY",
     few_clouds: "CLOUDY",
     broken_clouds: "CLOUDY",
+    scattered_clouds: "CLOUDY",
     shower_rain: "RAIN",
     light_rain: "RAIN",
     rain: "RAIN",

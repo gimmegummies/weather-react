@@ -47,7 +47,15 @@ export default function SearchEngine() {
   function getDate(timestamp) {
     const fullDate = new Date(timestamp * 1000);
     let day = fullDate.toDateString().split(" ").slice(0, 1).join();
-    let time = fullDate.getHours() + ":" + fullDate.getMinutes();
+    let hours = fullDate.getHours();
+    if (hours < 10) {
+      hours = `0${hours}`;
+    }
+    let minutes = fullDate.getMinutes();
+    if (minutes < 10) {
+      minutes = `0${minutes}`;
+    }
+    const time = `${hours}:${minutes}`;
     const currentDateTime = `${day} ${time}`;
     return currentDateTime;
   }
