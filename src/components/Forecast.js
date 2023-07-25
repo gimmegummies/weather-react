@@ -2,7 +2,7 @@ import ReactAnimatedWeather from "react-animated-weather";
 import "./Forecast.css";
 
 export default function Forecast({ forecast }) {
-  const { cityName, temp, descr, humid, wind, icon } = forecast;
+  const { cityName, date, temp, descr, humid, wind, icon } = forecast;
   const icons = {
     clear_sky: "CLEAR_DAY",
     overcast_clouds: "CLOUDY",
@@ -20,7 +20,7 @@ export default function Forecast({ forecast }) {
     <div className="Forecast">
       <div className="main_weather_info">
         <h2>{cityName}</h2>
-        <h3>Thursday 16:26</h3>
+        <h3>{date}</h3>
         <h3>{descr}</h3>
       </div>
       <div className="additional_weather_info">

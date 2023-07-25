@@ -11,6 +11,7 @@ export default function SearchEngine() {
   const [city, setCity] = useState("");
   const [forecast, setForecast] = useState({
     cityName: null,
+    date: null,
     temp: null,
     descr: null,
     humid: null,
@@ -43,9 +44,19 @@ export default function SearchEngine() {
     setCity(inputVal);
   }
 
+  function getDate(timestamp) {
+    const fullDate = new Date(timestamp * 1000);
+    let day = fullDate.toDateString().split(" ").slice(0, 1).join();
+    let time = fullDate.getHours() + ":" + fullDate.getMinutes();
+    const currentDateTime = `${day} ${time}`;
+    return currentDateTime;
+  }
+
   function displayForecast(resp) {
     // console.log(resp);
     const cityName = resp.data.city;
+    const timestamp = resp.data.time;
+    const date = getDate(timestamp);
     const temp = Math.floor(resp.data.temperature.current);
     const descr = resp.data.condition.description;
     const humid = resp.data.temperature.humidity;
@@ -53,6 +64,7 @@ export default function SearchEngine() {
     const icon = descr.split(" ").join("_");
     setForecast({
       cityName,
+      date,
       temp,
       descr,
       humid,
