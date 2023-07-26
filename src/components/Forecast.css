@@ -22,5 +22,5 @@
 
 .additional_weather_info div:nth-child(2) {
   color: rgba(243, 234, 234, 0.8);
-  font-size: clamp(18px, 4vw, 36px);
+  font-size: clamp(18px, 3.8vw, 36px);
 }/*# sourceMappingURL=Forecast.css.map */

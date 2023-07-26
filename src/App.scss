@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::selection {
   background-color: #00467f;
 }
@@ -51,7 +55,6 @@ input {
 
 footer a {
   color: #fff;
-  text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
 

@@ -40,7 +40,7 @@ export default function SearchEngine() {
 
   function updateCity(e) {
     let inputVal = e.target.value;
-    inputVal = inputVal.trim();
+    // inputVal = inputVal.trim();
     setCity(inputVal);
   }
 

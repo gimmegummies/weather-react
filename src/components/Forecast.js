@@ -1,4 +1,5 @@
 import ReactAnimatedWeather from "react-animated-weather";
+import DailyTemperature from "./DailyTemperature";
 import "./Forecast.css";
 
 export default function Forecast({ forecast }) {
@@ -14,6 +15,7 @@ export default function Forecast({ forecast }) {
     rain: "RAIN",
     thunderstorm: "RAIN",
     mist: "FOG",
+    fog: "FOG",
     snow: "SNOW",
   };
 
@@ -27,9 +29,10 @@ export default function Forecast({ forecast }) {
       <div className="additional_weather_info">
         <div>
           <ReactAnimatedWeather icon={icons[icon]} color="white" />
-          <p>
+          {/* <p>
             <span className="temperature">{temp}</span> °C
-          </p>
+          </p> */}
+          <DailyTemperature celsiusTemp={temp} />
         </div>
         <div>
           <p>Humidity: {humid}%</p>
