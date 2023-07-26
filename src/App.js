@@ -7,7 +7,14 @@ function App() {
     <div className="App">
       <SearchEngine />
       <footer>
-        coded by <a href="https://github.com/gimmegummies/weather-react">Ksu</a>
+        coded by{" "}
+        <a
+          href="https://github.com/gimmegummies/weather-react"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Ksu
+        </a>
       </footer>
     </div>
   );
