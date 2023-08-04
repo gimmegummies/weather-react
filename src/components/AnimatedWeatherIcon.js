@@ -9,6 +9,7 @@ export default function AnimatedWeatherIcon({ icon, size }) {
     broken_clouds: "CLOUDY",
     scattered_clouds: "CLOUDY",
     shower_rain: "RAIN",
+    moderate_rain: "RAIN",
     light_rain: "RAIN",
     rain: "RAIN",
     thunderstorm: "RAIN",

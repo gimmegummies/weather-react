@@ -89,7 +89,7 @@ export default function SearchEngine() {
     const url = `${weatherAPIUrl}v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
     try {
-      console.log(url);
+      // console.log(url);
       const response = await axios.get(url);
       displayForecast(response);
     } catch (error) {
