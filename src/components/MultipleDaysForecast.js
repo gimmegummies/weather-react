@@ -29,7 +29,11 @@ export default function MultipleDaysForecast({ city }) {
     <>
       {forecast.map((dailyForecast, index) => {
         if (index > 0 && index < 6) {
-          return <OneDayForecast data={dailyForecast} />;
+          return (
+            <span key={index}>
+              <OneDayForecast data={dailyForecast} />
+            </span>
+          );
         } else {
           return null;
         }
