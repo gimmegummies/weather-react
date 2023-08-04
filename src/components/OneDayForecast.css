@@ -1,7 +1,3 @@
-.one_day_forecast p:first-child {
-  margin-bottom: 0.3em;
-}
-
 .one_day_temperature span {
   padding-inline: 0.3em;
   font-size: clamp(12px, 4vw, 22px);
@@ -13,4 +9,5 @@
 
 .one_day_forecast time {
   display: block;
+  margin-bottom: 0.3em;
 }/*# sourceMappingURL=OneDayForecast.css.map */
