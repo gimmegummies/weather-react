@@ -1,23 +1,10 @@
-import ReactAnimatedWeather from "react-animated-weather";
+import AnimatedWeatherIcon from "./AnimatedWeatherIcon";
 import DailyTemperature from "./DailyTemperature";
+import MultipleDaysForecast from "./MultipleDaysForecast";
 import "./Forecast.css";
 
 export default function Forecast({ forecast }) {
   const { cityName, date, temp, descr, humid, wind, icon } = forecast;
-  const icons = {
-    clear_sky: "CLEAR_DAY",
-    overcast_clouds: "CLOUDY",
-    few_clouds: "CLOUDY",
-    broken_clouds: "CLOUDY",
-    scattered_clouds: "CLOUDY",
-    shower_rain: "RAIN",
-    light_rain: "RAIN",
-    rain: "RAIN",
-    thunderstorm: "RAIN",
-    mist: "FOG",
-    fog: "FOG",
-    snow: "SNOW",
-  };
 
   return (
     <div className="Forecast">
@@ -28,7 +15,8 @@ export default function Forecast({ forecast }) {
       </div>
       <div className="additional_weather_info">
         <div>
-          <ReactAnimatedWeather icon={icons[icon]} color="white" />
+          <AnimatedWeatherIcon icon={icon} />
+          {/* <ReactAnimatedWeather icon={icons[icon]} color="white" /> */}
           {/* <p>
             <span className="temperature">{temp}</span> °C
           </p> */}
@@ -39,7 +27,9 @@ export default function Forecast({ forecast }) {
           <p>Wind: {wind} km/h</p>
         </div>
       </div>
-      <div className="6_days_forecast"></div>
+      <div className="multiple_days_forecast">
+        <MultipleDaysForecast city={cityName} />
+      </div>
     </div>
   );
 }
