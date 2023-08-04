@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
 import AnimatedWeatherIcon from "./AnimatedWeatherIcon";
-import axios from "axios";
 import "./OneDayForecast.css";
 
 export default function OneDayForecast({ data }) {

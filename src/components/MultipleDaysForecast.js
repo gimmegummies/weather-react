@@ -12,7 +12,7 @@ export default function MultipleDaysForecast({ city }) {
       const url = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=${units}`;
 
       try {
-        console.log(url);
+        // console.log(url);
         const data = await axios.get(url);
         const dailyForecast = await data.data.daily;
         // console.log(dailyForecast);

@@ -22,4 +22,4 @@ function App() {
 
 export default App;
 
-// todo: add 6-days forecast
+// todo: add README on GitHub, implement "my location" forecast functionality
