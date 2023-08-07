@@ -4,6 +4,7 @@ import Forecast from "./Forecast";
 import { Puff } from "react-loader-spinner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import locationServices from "../services/locationServices";
 
 import "./SearchEngine.css";
 
@@ -20,6 +21,8 @@ export default function SearchEngine() {
   });
 
   const weatherAPIUrl = "https://api.shecodes.io/weather/";
+  const apiKey = "785e4002t4o34d2ed60bb3aec801e9af";
+  const units = "metric";
 
   useEffect(() => {
     const city = "Kharkiv";
@@ -84,8 +87,6 @@ export default function SearchEngine() {
   async function getForecast(e) {
     e.preventDefault();
 
-    const apiKey = "785e4002t4o34d2ed60bb3aec801e9af";
-    const units = "metric";
     const url = `${weatherAPIUrl}v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
     try {
@@ -99,6 +100,21 @@ export default function SearchEngine() {
     setCity("");
   }
 
+  async function getForecastByLocation(e) {
+    e.preventDefault();
+
+    try {
+      const position = await locationServices.getCurrentLocation();
+      const { lat, lon } = position;
+
+      const url = `${weatherAPIUrl}v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
+      const response = await locationServices.getDataForCurrentLocation(url);
+      displayForecast(response);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
   return (
     <div className="WeatherApp">
       <form onSubmit={getForecast}>
@@ -110,7 +126,7 @@ export default function SearchEngine() {
         />
         <button type="submit">Search</button>
         {/* <button>Current</button> */}
-        <a href="/">
+        <a onClick={getForecastByLocation} href="/">
           <FontAwesomeIcon
             icon={faLocationDot}
             style={{
